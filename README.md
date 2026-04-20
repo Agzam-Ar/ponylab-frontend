@@ -4,8 +4,6 @@ Vite + TypeScript + Preact dashboard
 ## Setup
 
 ```sh
-```
-```
 cd frontend
 npm install
 npm run dev
