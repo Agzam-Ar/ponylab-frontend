@@ -47,6 +47,10 @@ export function AnalysisPanel({ data }: Props) {
                 <div class="analysis-card">
                     <h3>Рекомендуемые параметры</h3>
                     <div class="analysis-row">
+                        <span>Длина дня</span>
+                        <span>{data.recommended_params.light_duration} часов</span>
+                    </div>
+                    <div class="analysis-row">
                         <span>Температура (День/Ночь)</span>
                         <span>{data.recommended_params.temp_day}/{data.recommended_params.temp_day}°C</span>
                     </div>
@@ -55,8 +59,16 @@ export function AnalysisPanel({ data }: Props) {
                         <span>{data.recommended_params.humidity_day}/{data.recommended_params.temp_night}%</span>
                     </div>
                     <div class="analysis-row">
+                        <span>Полив:</span>
+                        <span>{data.recommended_params.irrigation_pulses} раз/день</span>
+                    </div>
+                    <div class="analysis-row">
+                        <span>CO<sub>2</sub></span>
+                        <span>{data.recommended_params.co2_target} ppm</span>
+                    </div>
+                    <div class="analysis-row">
                         <span>EC</span>
-                        <span>{data.recommended_params.ec}</span>
+                        <span>{data.recommended_params.ec} мСм/см</span>
                     </div>
                     <div class="analysis-row">
                         <span>pH</span>

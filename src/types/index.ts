@@ -24,6 +24,7 @@ export interface RecommendedParams {
     ec: number;
     ph: number;
 }
+
 export interface AnalysisData {
     growth_stage: string;
     health: number;
