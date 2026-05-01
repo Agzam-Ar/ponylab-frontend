@@ -9,9 +9,17 @@
   --accent-blue: #2196f3;
   --status-on: #4caf50;
   --status-off: #f44336;
+
+  --glass: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.2);
+  --data-green: #b2ff59;
+
+  --card-background: #ffffff11;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,9 +28,17 @@
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--bg-gradient);
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: var(--text-primary);
   min-height: 100vh;
   line-height: 1.5;
+}
+
+#root {
+  background: #00000022;
 }
 
 .app {
@@ -35,14 +51,26 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 600;
   line-height: 1.2;
 }
 
-h1 { font-size: 1.5rem; }
-h2 { font-size: 1.25rem; margin-bottom: 1rem; }
-h3 { font-size: 1rem; margin-bottom: 0.75rem; }
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
 
 .panel {
   background: var(--panel-bg);
@@ -50,6 +78,33 @@ h3 { font-size: 1rem; margin-bottom: 0.75rem; }
   border-radius: 1rem;
   padding: 1.25rem;
   backdrop-filter: blur(12px);
+}
+
+.glass {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 32px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
+
+
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
+
+
 }
 
 /* Sensor panel */
@@ -102,8 +157,8 @@ h3 { font-size: 1rem; margin-bottom: 0.75rem; }
 }
 
 .hero {
-  background: var(--panel-bg);
-  border: 1px solid var(--panel-border);
+  /* background: var(--panel-bg); */
+  /* border: 1px solid var(--panel-border); */
   border-radius: 1rem;
   padding: 1.5rem;
   backdrop-filter: blur(12px);
@@ -128,7 +183,7 @@ h3 { font-size: 1rem; margin-bottom: 0.75rem; }
 }
 
 .analysis-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-background);
   border-radius: 0.75rem;
   padding: 1rem;
 }
@@ -142,7 +197,7 @@ h3 { font-size: 1rem; margin-bottom: 0.75rem; }
 
 /* Controls */
 .control-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-background);
   border-radius: 0.75rem;
   padding: 0.875rem;
   margin-bottom: 0.75rem;
@@ -192,13 +247,19 @@ h3 { font-size: 1rem; margin-bottom: 0.75rem; }
   border-radius: 0.5rem;
   padding: 1rem;
   color: #f44336;
+  background: rgb(255 0 0 / 11%);
+  backdrop-filter: blur(35px);
+  border: 2px solid rgb(255 0 0 / 12%);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
   .app {
     grid-template-columns: 1fr;
   }
-  
+
   .analysis-grid {
     grid-template-columns: 1fr;
   }

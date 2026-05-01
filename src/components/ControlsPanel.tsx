@@ -19,24 +19,24 @@ export function ControlsPanel() {
     if (!ctrl) return;
 
     const newOn = !ctrl.on;
-    
-    setStates(prev => prev.map(c => 
+
+    setStates(prev => prev.map(c =>
       c.id === id ? { ...c, on: newOn } : c
     ));
 
     try {
       await sendCommand({ type: 'set_output', id, on: newOn });
     } catch {
-      setStates(prev => prev.map(c => 
+      setStates(prev => prev.map(c =>
         c.id === id ? { ...c, on: !newOn } : c
       ));
     }
   };
 
   return (
-    <aside class="panel">
+    <aside class="panel glass">
       <h2>Управление</h2>
-      
+
       {states.map(ctrl => (
         <div class="control-card" key={ctrl.id}>
           <div class="control-header">

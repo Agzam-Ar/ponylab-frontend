@@ -18,7 +18,7 @@ export function App() {
         fetchSensors().catch(e => { throw e; }),
         fetchAnalysis(),
       ]);
-      
+
       setSensors(sensorsData);
       setAnalysis(analysisData);
       setImageUrl(`/api/image?t=${Date.now()}`);
@@ -39,17 +39,17 @@ export function App() {
   return (
     <div class="app">
       <SensorPanel data={sensors} loading={loading} />
-      
+
       <main class="main">
-        {error && <div class="error-box">{error}</div>}
-        
-        <div class="hero">
+        {error && <div class="error-box glass">{error}</div>}
+
+        <div class="hero glass">
           <img src={imageUrl} alt="Камера теплицы" />
         </div>
-        
+
         <AnalysisPanel data={analysis} />
       </main>
-      
+
       <ControlsPanel />
     </div>
   );

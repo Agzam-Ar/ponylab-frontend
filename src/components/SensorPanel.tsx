@@ -8,7 +8,7 @@ interface Props {
 export function SensorPanel({ data, loading }: Props) {
   if (loading) {
     return (
-      <aside class="panel">
+      <aside class="panel glass">
         <h1>Smart Greenhouse</h1>
         <div class="sensor-row"><span class="sensor-label">Загрузка...</span></div>
       </aside>
@@ -17,7 +17,7 @@ export function SensorPanel({ data, loading }: Props) {
 
   if (!data) {
     return (
-      <aside class="panel">
+      <aside class="panel glass">
         <h1>Smart Greenhouse</h1>
         <div class="sensor-row"><span class="sensor-label">Нет данных</span></div>
       </aside>
@@ -25,9 +25,9 @@ export function SensorPanel({ data, loading }: Props) {
   }
 
   return (
-    <aside class="panel">
+    <aside class="panel glass">
       <h1>Smart Greenhouse</h1>
-      
+
       <div class="sensor-row">
         <span class="sensor-label">pH</span>
         <span class="sensor-value">{data.ph.toFixed(2)}</span>
