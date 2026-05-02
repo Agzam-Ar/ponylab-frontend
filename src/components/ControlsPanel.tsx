@@ -34,7 +34,7 @@ export function ControlsPanel({ logs }: { logs: string[] }) {
     };
 
     return (
-        <aside class="panel glass">
+        <aside class="panel glass control-card">
             <h2>Логи</h2>
             {
                 logs.map(l => (
@@ -43,25 +43,6 @@ export function ControlsPanel({ logs }: { logs: string[] }) {
                     </div>
                 ))
             }
-            {/* <h2>Управление</h2> */}
-            {/**/}
-            {/* {states.map(ctrl => ( */}
-            {/*     <div class="control-card" key={ctrl.id}> */}
-            {/*         <div class="control-header"> */}
-            {/*             <span>{ctrl.label}</span> */}
-            {/*             <button */}
-            {/*                 class={`toggle ${ctrl.on ? 'on' : ''}`} */}
-            {/*                 onClick={() => toggle(ctrl.id)} */}
-            {/*                 aria-label={`Toggle ${ctrl.label}`} */}
-            {/*             /> */}
-            {/*         </div> */}
-            {/*         {ctrl.auto && ( */}
-            {/*             <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}> */}
-            {/*                 AUTO */}
-            {/*             </span> */}
-            {/*         )} */}
-            {/*     </div> */}
-            {/* ))} */}
         </aside>
     );
 }

@@ -27,7 +27,7 @@ export function AnalysisPanel({ data }: Props) {
                     <h3>Анализ растения</h3>
                     <div class="analysis-row">
                         <span>Стадия</span>
-                        <span class="pill">{data.growth_stage}</span>
+                        <span class="pill">{data.growth_stage.replaceAll('_', ' ')}</span>
                     </div>
                     <div class="analysis-row">
                         <span>Здоровье</span>
@@ -36,7 +36,7 @@ export function AnalysisPanel({ data }: Props) {
                     <div class="analysis-row">
                         <span>Состояние</span>
                         <span class={`pill ${data.disease === 'healthy' ? '' : 'error'}`}>
-                            {data.disease}
+                            {data.disease.replaceAll('_', ' ')}
                         </span>
                     </div>
                     <div class="analysis-row">
