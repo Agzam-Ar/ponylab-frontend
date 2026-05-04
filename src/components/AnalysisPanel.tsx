@@ -52,11 +52,11 @@ export function AnalysisPanel({ data }: Props) {
                     </div>
                     <div class="analysis-row">
                         <span>Температура (День/Ночь)</span>
-                        <span>{data.recommended_params.temp_day}/{data.recommended_params.temp_day}°C</span>
+                        <span>{data.recommended_params.temp_day}/{data.recommended_params.temp_night}°C</span>
                     </div>
                     <div class="analysis-row">
                         <span>Влажность (День/Ночь)</span>
-                        <span>{data.recommended_params.humidity_day}/{data.recommended_params.temp_night}%</span>
+                        <span>{data.recommended_params.humidity_day}/{data.recommended_params.humidity_night}%</span>
                     </div>
                     <div class="analysis-row">
                         <span>Полив:</span>
