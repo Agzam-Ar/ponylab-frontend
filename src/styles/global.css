@@ -80,31 +80,65 @@ h3 {
   backdrop-filter: blur(12px);
 }
 
+/* .glass { */
+/*   border-radius: 1rem; */
+/*   padding: 1.25rem; */
+/*   background: var(--glass); */
+/*   backdrop-filter: blur(15px); */
+/*   border: 1px solid var(--border); */
+/*   border-radius: 15px; */
+/*   box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 32px; */
+/**/
+/*   background: rgba(255, 255, 255, 0.1); */
+/*   backdrop-filter: blur(35px); */
+/*   border: 2px solid rgba(255, 255, 255, 0.1); */
+/*   box-shadow: 0 0 80px rgba(0, 0, 0, 0.25); */
+/*   padding: 30px 30px 30px 30px; */
+/*   overflow: hidden; */
+/**/
+/**/
+/*   background: rgba(0, 0, 0, 0.2); */
+/*   backdrop-filter: blur(35px); */
+/*   border: 2px solid rgba(255, 255, 255, 0.1); */
+/*   box-shadow: 0 0 80px rgba(0, 0, 0, 0.25); */
+/*   padding: 30px 30px 30px 30px; */
+/*   overflow: hidden; */
+/**/
+/**/
+/* } */
+
 .glass {
-  border-radius: 1rem;
-  padding: 1.25rem;
-  background: var(--glass);
-  backdrop-filter: blur(15px);
-  border: 1px solid var(--border);
+  /* Геометрия и внутренние отступы */
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 32px;
-
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(35px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
-  padding: 30px 30px 30px 30px;
   overflow: hidden;
 
+  /* Эффект стекла: глубокий темный градиент для контраста */
+  background: linear-gradient(135deg,
+      rgba(15, 18, 22, 0.75) 0%,
+      rgba(25, 30, 36, 0.50) 100%);
 
-  background: rgba(0, 0, 0, 0.2);
+  /* Размытие фона (35px — отличный выбор, оставляем) */
   backdrop-filter: blur(35px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
-  padding: 30px 30px 30px 30px;
-  overflow: hidden;
+  -webkit-backdrop-filter: blur(35px);
+  /* Для поддержки в Safari */
 
+  /* Утонченная полупрозрачная рамка */
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
+  /* Мягкая глубокая тень вместо размытого свечения */
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  /* Внутренний блик сверху */
+}
+
+.glass {
+  background: linear-gradient(180deg,
+      rgba(20, 20, 20, 0.85) 0%,
+      rgba(10, 10, 10, 0.65) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
 /* Sensor panel */
